@@ -1,0 +1,64 @@
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+    cursor: pointer;
+    margin: 5px;
+    background-color: #f8f9fa;
+    transition: transform 0.5s;
+}
+
+.card-back {
+    background-color: #6c757d;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.game-board {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%; /* Full width of parent container */
+    max-width: 600px; /* Set max width for larger screens */
+}
+
+.easy .card-col {
+    flex: 1 1 25%;
+}
+
+.medium .card-col {
+    flex: 1 1 16.67%;
+}
+
+.hard .card-col {
+    flex: 1 1 12.5%;
+}
+
+.game-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 576px) {
+    .card {
+        width: 80px; /* Adjust card size for small screens */
+        height: 80px;
+    }
+
+    .game-board {
+        padding: 5px;
+    }
+
+    .game-info {
+        font-size: 14px;
+    }
+}

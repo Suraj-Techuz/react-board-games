@@ -1,0 +1,289 @@
+/* General Reset for margins and paddings */
+html, body {
+    height: 100%; /* Full height for the viewport */
+    margin: 0;    /* Remove default margin */
+    padding: 0;   /* Remove default padding */
+    box-sizing: border-box; /* Ensure border and padding are included in the total height */
+    font-family: Arial, sans-serif;
+}
+
+/* Apply the background image to the body */
+body {
+    background-size: cover; /* Ensure the image covers the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image tiling */
+    background-color: #f5f5f5; /* Fallback color in case the image doesn't load */
+}
+
+/* Optional: Apply a background color to the main content wrapper */
+.main-wrapper {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    max-width: 800px; /* Limit the width */
+    margin: auto; /* Center the wrapper */
+}
+
+/* Container styling */
+.container {
+    background-color: #f0f8ff; /* Light blue background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Header styling */
+h1 {
+    color: #ff6347; /* Tomato color */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    font-size: 2rem; /* Size for desktop */
+    text-align: center;
+}
+
+/* Select menu styling */
+.select-menu {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    border: 2px solid #ff6347; /* Tomato border */
+    border-radius: 8px;
+    background-color: #fff;
+    color: #ff6347;
+    font-size: 1rem; /* Size for desktop */
+}
+
+/* Game board styling */
+.game-board {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr); /* Ensure each column takes up an equal amount of space */
+    grid-template-rows: repeat(3, 1fr); /* Ensure each row takes up an equal amount of space */
+    gap: 5px; /* Space between the squares */
+    margin: 20px auto; /* Centering the grid */
+    max-width: 320px; /* Adjust width of the game board */
+    border: 2px solid red; /* Debugging border */
+    padding: 10px; /* Padding inside the game board */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+}
+
+/* Square styles */
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #fff;
+    border: 2px solid #ff6347; /* Tomato border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Hover effect for squares */
+.square:hover {
+    background-color: #ffebcd; /* Blanched Almond background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Disabled hover effect */
+.game-board.disabled .square:hover {
+    background-color: #fff; /* No hover effect */
+    transform: none; /* No transformation */
+}
+
+/* Style for selected squares */
+.square.selected {
+    background-color: #d1ecf1; /* Light blue for selected */
+}
+
+/* Style for winning squares */
+.square.winning {
+    background-color: #d4edda; /* Light green for winning line */
+    border-color: #28a745; /* Darker green border */
+}
+
+/* Popup overlay styling */
+.popup-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+}
+
+/* Popup content styling */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    color: #ff6347; /* Tomato color */
+}
+
+/* Fade-in and fade-out animations */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Start button styles */
+.start-button {
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    font-size: 1.2rem;
+}
+
+/* Hover effect for start button */
+.start-button:hover {
+    background-color: #e55347; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Reset button styles */
+.btn-secondary {
+    background-color: #f39c12; /* Sunflower color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover effect for reset button */
+.btn-secondary:hover {
+    background-color: #e67e22; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Status text */
+h2 {
+    color: #28a745; /* Green color for status */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    font-size: 1.5rem;
+}
+
+/* Mobile Portrait View Styles */
+@media only screen and (orientation: portrait) {
+    .text-center.mb-4 {
+        padding: 1rem 2rem;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .custom-bg {
+        padding: 1rem 1rem;
+        margin: 5px;
+        max-width: 200px;
+    }
+}
+
+/* Mobile Landscape View Styles */
+@media only screen and (orientation: landscape) {
+    .container {
+        flex-direction: column; /* Change layout to vertical for mobile landscape */
+        align-items: flex-start; /* Align elements to the left */
+        padding: 20px; /* Increase padding for better spacing */
+    }
+
+    h1 {
+        font-family: 'Lobster', cursive; /* Fun font for title */
+        font-size: 2.5rem; /* Larger font size for mobile landscape */
+        text-align: left; /* Align title to the left */
+        margin: 0; /* Remove margin for better alignment */
+    }
+
+    /* Adjust styles for other elements as needed for mobile landscape layout */
+    .select-menu,
+    .game-board,
+    .button-container,
+    h2,
+    .popup-overlay {
+        width: 100%; /* Take up full width */
+        margin: 10px 0; /* Add spacing between elements */
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 1fr); /* Use fractional units for responsive layout */
+        grid-template-rows: repeat(1, auto); /* Single row */
+    }
+
+    .button-container {
+        justify-content: flex-end; /* Align buttons to the right */
+    }
+
+    .popup-overlay {
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Offset vertically */
+    }
+}
+
+/* Parent div styling */
+.parent-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+/* Expanded row styling */
+.expanded-row {
+    padding: 20px; /* Adjust padding as needed */
+}
+
+/* Alert on win styling */
+.alert-on-win {
+    position: fixed; /* Fixed position to stay in place */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    z-index: 9999; /* Ensure it's on top of other elements */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Popup styling */
+.popup {
+    background-color: #ffffff; /* Solid background color for the popup */
+    border: 1px solid #ddd; /* Border for the popup */
+    padding: 20px; /* Padding inside the popup */
+    border-radius: 8px; /* Rounded corners for the popup */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Shadow for better visibility */
+}
+
+/* Settings dropdown styling */
+.settings-dropdown {
+    position: absolute;
+    top: 40px; /* Adjust based on the icon's position */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.settings-dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+}
