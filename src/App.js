@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<MinesweeperGame />} />
+        <Route path="/" element={<FramerMotion />} />
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
-        <Route path="/framer-motion" element={<FramerMotion />} />
+        <Route path="/framer-motion" element={<MinesweeperGame />} />
         <Route path="/minesweeper" element={<Home />} />
       </Routes>
     </div>
