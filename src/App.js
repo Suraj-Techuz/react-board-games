@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<FramerMotion />} />
+        <Route path="/" element={<Home />} />
         <Route path="/tic-tac-toe" element={<TicTacToe />} />
-        <Route path="/framer-motion" element={<MinesweeperGame />} />
-        <Route path="/minesweeper" element={<Home />} />
+        <Route path="/framer-motion" element={<FramerMotion />} />
+        <Route path="/minesweeper" element={<MinesweeperGame />} />
       </Routes>
     </div>
   );
